@@ -1,107 +1,164 @@
-
-
 # CREDIT CARD FRAUD DETECTION USING LOGISTIC REGRESSION
 
+1.Overview
 
-## Table of Contents
-1. [Overview](#overview)
-2. [Data Sources](#data-sources)
-3. [Tools Used](#tools-used)
-4. [Process](#process)
-5.  [QUESTIONS (KPI)](#QUESTIONS (KPI))
-6. [Key Insights](#key-insights)
-7. [Visualizations](#visualizations)
-8. [Conclusion](#conclusion)
-9. [Author](#author)
-   
+Data Sources
 
+Tools Used
 
+Methodology
 
+Key Questions (KPIs)
 
-## Overview / Objectives
-This project focuses on detecting fraudulent credit card transactions using Logistic Regression.
-The dataset is highly imbalanced, so undersampling and proper preprocessing techniques are applied to build a reliable machine learning model.
-## Data Sources
-- `Dataset` — Credit Card Transactions Dataset 
--Total transactions: 284,807
+Model Evaluation
 
-Fraudulent transactions: 492
+Visualizations
 
-Features:
+Conclusion
 
-V1 to V28: PCA-transformed, anonymized features
+How to Run the Project
+
+Author
+
+1.Overview
+
+This project focuses on detecting fraudulent credit card transactions using Logistic Regression, a widely used classification algorithm.
+The dataset used is highly imbalanced, with fraudulent transactions representing a very small percentage of total transactions. To address this, undersampling and proper preprocessing techniques were applied to build a more reliable and meaningful machine learning model.
+
+The goal of this project is to demonstrate:
+
+Handling imbalanced datasets
+
+Applying supervised machine learning techniques
+
+Building and evaluating a fraud detection model using Python
+
+Data Sources
+
+Dataset: Credit Card Transactions Dataset
+
+Total Transactions: 284,807
+
+Fraudulent Transactions: 492
+
+Features
+
+V1 – V28: PCA-transformed, anonymized features
 
 Amount: Transaction amount
 
 Time: Time elapsed between transactions
 
-Class: Target variable (0 = normal, 1 = fraud)
+Class: Target variable
 
-Note: PCA was applied to protect sensitive customer information, so individual V-columns are not interpretable.
-## Tools Used
-- Python (Jupyter Notebook)
-- Python (script-Pandas,Numpy,scikit-learn,matplotlib)
+0 → Normal transaction
 
-- Methodology
-1️.Data Loading
+1 → Fraudulent transaction
 
-The dataset is loaded using pandas and basic inspection is performed.
+Note: PCA was applied to protect sensitive customer information, so individual V-columns are not directly interpretable.
 
-2️. Handling Class Imbalance
+Tools Used
 
-The dataset is highly imbalanced.
+Python (Jupyter Notebook)
 
-All fraud transactions are retained.
+Python Script
 
-A random sample of normal transactions is selected to balance the classes.
+Libraries:
 
-3️. Data Shuffling
+pandas
 
-The balanced dataset is shuffled to remove any ordering bias.
+numpy
 
-4️. Feature and Target Separation
+scikit-learn
+
+matplotlib
+
+Methodology
+1. Data Loading
+
+The dataset is loaded using pandas, followed by initial inspection to understand structure, size, and class distribution.
+
+2. Handling Class Imbalance
+
+The dataset is extremely imbalanced.
+
+All fraudulent transactions are retained.
+
+A random sample of normal transactions is selected to balance the classes using undersampling.
+
+3. Data Shuffling
+
+The balanced dataset is shuffled to eliminate any ordering bias.
+
+4. Feature and Target Separation
 
 Features (X): All columns except Class
 
-Target (Y): Class
+Target (y): Class
 
-5️. Train-Test Split
+5. Train-Test Split
 
 80% training data
 
 20% testing data
 
-Stratified split is used to preserve class distribution
+Stratified split is used to preserve class distribution.
 
-6️.  Feature Scaling
+6. Feature Scaling
 
-StandardScaler is applied to standardize features
+StandardScaler is applied to standardize numerical features.
 
-Scaling is done after splitting to prevent data leakage
+Scaling is performed after splitting to prevent data leakage.
 
-7️. Model Training
+7. Model Training
 
-Logistic Regression is used
+Logistic Regression is used as the classification model.
 
-Increased max_iter to ensure convergence
+max_iter is increased to ensure proper model convergence.
 
-8. Model Evaluation
+Key Questions (KPIs)
 
-Accuracy is calculated on both training and testing datasets
+How accurately can the model detect fraudulent transactions?
 
+How well does the model generalize to unseen data?
 
+Does undersampling improve fraud detection performance?
+
+Is Logistic Regression suitable for this classification task?
+
+Model Evaluation
+
+The model is evaluated using:
+
+Accuracy score on training and testing data
+
+Confusion Matrix
+
+Precision, Recall, and F1-score
+(These metrics are especially important for imbalanced datasets like fraud detection.)
+
+Visualizations
+
+Class distribution before and after balancing
+
+Model performance metrics visualization
+
+Confusion matrix plot
+
+Conclusion
+
+This project demonstrates an end-to-end machine learning workflow for detecting fraudulent credit card transactions.
+By addressing class imbalance and applying proper preprocessing techniques, the Logistic Regression model is able to identify fraudulent transactions more effectively than a naïve baseline approach.
+
+The project highlights the importance of:
+
+Data preprocessing
+
+Handling imbalanced datasets
+
+Choosing appropriate evaluation metrics in fraud detection problems
 
 How to Run the Project
 
-Clone the repository or download the files
+Clone the repository or download the proj
 
-Install required dependencies:
-
-pip install pandas numpy scikit-learn matplotlib
-
-
-Run the script:
-
-python fraud_detection.py
-
- 
