@@ -1,6 +1,6 @@
 
-# PART 1
-# Sales Analysis 
+
+# CREDIT CARD FRAUD DETECTION USING LOGISTIC REGRESSION
 
 
 ## Table of Contents
@@ -19,11 +19,12 @@
 
 
 ## Overview / Objectives
-This project analyzes inventory, sales, and purchase data to support business decisions, identify trends, and improve operational efficiency. Insights from this analysis help optimize stock management, vendor performance, and overall sales strategy.
+This project focuses on detecting fraudulent credit card transactions using Logistic Regression.
+The dataset is highly imbalanced, so undersampling and proper preprocessing techniques are applied to build a reliable machine learning model.
 ## Data Sources
-- `Dataset` —   - Sales, Inventory, and Purchases CSV files provided by the companyhelp m 
+- `Dataset` — Credit Card Transactions Dataset 
 -
 ## Tools Used
 - Python (Jupyter Notebook)
 - Python (script)
-- Power BI for dashboards and KPI visualization
+
